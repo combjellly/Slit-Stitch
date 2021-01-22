@@ -1,25 +1,24 @@
-#N canvas 0 22 1203 383 10;
-#X text 103 144 Shape;
-#X text -104 2 Square;
-#X text -52 0 Circle;
-#X text -7 2 Triangle;
-#X text 52 61 Cuboid;
-#X text 100 0 Sphere;
-#X text 151 2 Torus;
-#X obj -242 -90 cnv 15 700 300 empty empty empty 20 12 0 14 -233017
+#N canvas 770 108 702 321 10;
+#X text 192 -427 Shape;
+#X text -15 -569 Square;
+#X text 37 -571 Circle;
+#X text 82 -569 Triangle;
+#X text 141 -510 Cuboid;
+#X text 189 -571 Sphere;
+#X text 240 -569 Torus;
+#X obj -153 -661 cnv 15 700 300 empty empty empty 20 12 0 14 -233017
 -66577 0;
-#X obj 76 117 bng 50 250 50 0 SAVE empty empty 17 7 0 10 -262144 -1
--1;
-#X text 67 93 CHOSE FILE NAME/SAVE LOCATION;
-#X obj 388 -81 tgl 15 0 MANUALCLICK CLICK empty 17 7 0 10 -258113 -257985
--1 0 1;
-#X text 411 -84 RECORD;
-#N canvas 19 50 450 301 gemcode 0;
+#X obj 165 -454 bng 50 250 50 0 SAVE empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 477 -652 tgl 15 0 MANUALCLICK CLICK empty 17 7 0 10 -258113
+-257985 -1 0 1;
+#X text 500 -655 RECORD;
+#N canvas 19 50 530 388 gemcode 0;
 #X obj 167 248 gemwin;
 #X msg 217 198 1;
 #X msg 149 197 create;
 #X msg 272 200 destroy;
-#X obj 164 62 tgl 15 0 maintog empty empty 17 7 0 10 -262144 -1 -1
+#X obj 164 62 tgl 15 0 empty maintog empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 164 101 == 1;
 #X obj 205 101 == 0;
@@ -31,7 +30,6 @@
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
 #X connect 4 0 5 0;
-# Nicholas Brown-Hernandez 2020
 #X connect 4 0 6 0;
 #X connect 5 0 9 0;
 #X connect 5 0 9 1;
@@ -42,54 +40,27 @@
 #X connect 9 0 2 0;
 #X connect 9 0 1 0;
 #X connect 10 0 3 0;
-#X restore -235 -7 pd gemcode;
-#X obj -236 82 tgl 120 0 maintog empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj -108 111 bng 80 250 50 0 imageload empty empty 17 7 0 10 -262144
+#X restore -144 -578 pd gemcode;
+#X obj -147 -489 tgl 120 0 maintog empty empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj -19 -460 bng 80 250 50 0 imageload empty empty 17 7 0 10 -262144
 -1 -1;
-#X text -234 62 OPEN WINDOW;
-#X obj -111 24 hradio 50 1 0 8 shape empty empty 0 -8 0 10 -262144
+#X text -145 -509 OPEN WINDOW;
+#X obj -22 -547 hradio 50 1 0 8 shape empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X text -104 2 Square;
-#X text -52 2 Circle;
-#X text -7 2 Triangle;
-#X text 51 2 Cuboid;
-#X text 100 2 Sphere;
-#X text 151 2 Torus;
-#X obj -21 110 bng 80 250 50 0 videoload empty empty 17 7 0 10 -262144
+#X text -15 -569 Square;
+#X text 37 -569 Circle;
+#X text 82 -569 Triangle;
+#X text 140 -569 Cuboid;
+#X text 189 -569 Sphere;
+#X text 240 -569 Torus;
+#X obj 68 -461 bng 80 250 50 0 videoload empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 291 -82 vradio 50 1 0 2 inswitch empty empty 1 -8 0 10 -262144
+#X obj 380 -653 vradio 50 1 0 2 inswitch empty empty 1 -8 0 10 -262144
 -1 -1 0;
-#X text 254 -68 IMAGE;
-#X text 254 -17 VIDEO;
-#N canvas 561 244 450 300 listshit 0;
-#X obj 128 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 126 128 stat;
-#X obj 128 162 list;
-#X obj 126 185 list split 9;
-#X obj 121 213 unpack symbol;
-#X obj 114 283 system;
-#X obj 124 338 print;
-#X msg 112 237 python3 \$1/slit.py;
-#X obj 308 204 unpack symbol;
-#X msg 375 381 ulimit -n 2000;
-#X obj 400 330 system;
-#X obj 308 438 print;
-#X msg 317 257 python3 \$1/slit.py;
-#X msg 375 381 ulimit -n 2000;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 4 0 7 0;
-#X connect 7 0 5 0;
-#X connect 7 0 6 0;
-#X connect 8 0 12 0;
-#X connect 12 0 10 0;
-#X connect 12 0 11 0;
-#X restore -236 -35 pd listshit;
-#N canvas 678 54 450 300 savefeedback 0;
+#X text 343 -639 IMAGE;
+#X text 343 -588 VIDEO;
+#N canvas 0 22 1280 778 savefeedback 0;
 #X obj 8 -515 tgl 15 0 CLICK empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 293 346 666 273 save 0;
@@ -165,40 +136,33 @@
 #X connect 3 0 0 0;
 #X connect 4 0 1 1;
 #X connect 5 0 0 0;
-#X restore -237 -61 pd savefeedback;
-#X floatatom 138 129 5 0 0 0 - - X;
-#X floatatom 138 149 5 0 0 0 - - Y;
-#X text 175 127 X;
-#X text 175 149 Y;
-#N canvas 704 356 450 300 python/command 0;
-#X obj -1018 132 system;
-#X msg -1018 90 open /Users/NICK/Documents/Work/portfolio/slitstitch/main.command
+#X restore -148 -632 pd savefeedback;
+#X floatatom 227 -442 5 0 0 0 - - X;
+#X floatatom 227 -422 5 0 0 0 - - Y;
+#X text 264 -444 X;
+#X text 264 -422 Y;
+#N canvas 738 49 488 193 python/command 1;
+#X msg -1017 100 open /Users/NICK/Documents/Work/portfolio/slitstitch/main.command
 ;
 #X obj -1017 12 r save;
 #X obj -1017 57 textfile;
 #X msg -1017 35 read location.txt \, clear \, add \$1 \, write location.txt
 ;
-#X obj -933 59 bng 15 250 50 0 empty stitch empty 17 7 0 10 -262144
+#X obj -936 76 bng 15 250 50 0 empty stitch empty 17 7 0 10 -262144
 -1 -1;
-#X connect 1 0 0 0;
-#X connect 2 0 4 0;
-#X connect 4 0 3 0;
-#X connect 5 0 1 0;
-#X restore -238 -84 pd python/command;
-#X obj 364 118 cnv 15 80 80 empty empty empty 20 12 0 14 -33289 -66577
+#X obj -1018 143 motex/system;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X restore -149 -655 pd python/command;
+#X obj 453 -453 cnv 15 80 80 empty empty empty 20 12 0 14 -33289 -66577
 0;
-#X obj 374 127 bng 59 250 50 0 empty empty empty 17 7 0 10 -258113
+#X obj 463 -444 bng 59 250 50 0 stitch empty empty 17 7 0 10 -258113
 -261234 -1;
-#X text 366 100 STITCH;
-#X text 134 111 Image Size;
-#X obj 522 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X floatatom 523 225 5 0 0 0 - - rotate;
-#X obj 522 195 counter 1e+09;
-#X obj 521 115 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 522 167 metro 30;
-#X text 493 -73 INSTRUCTIONS: Please see readme for more info 1 Open
+#X text 455 -471 STITCH;
+#X text 223 -460 Image Size;
+#X text -41 -621 INSTRUCTIONS: Please see readme for more info 1 Open
 Display Window 2 Load an image/Video 3 Click and drag image to begin
 scanning. Release mouse click to end scan 4 STITCH TOGETHER :-);
 #N canvas 302 22 1280 722 images 0;
@@ -354,10 +318,8 @@ scanning. Release mouse click to end scan 4 STITCH TOGETHER :-);
 #X obj 319 202 loadbang;
 #X msg 314 228 1;
 #X obj 435 444 sphere 12 50;
-#X obj 104 239 rotateXYZ;
+#X obj 106 264 rotateXYZ;
 #X floatatom 231 223 5 0 0 0 - rotate -;
-#X obj 93 284 pix_lumaoffset;
-#X floatatom 299 290 5 0 0 0 - fx -;
 #X connect 0 0 1 3;
 #X connect 1 0 54 0;
 #X connect 2 0 1 0;
@@ -429,20 +391,23 @@ scanning. Release mouse click to end scan 4 STITCH TOGETHER :-);
 #X connect 51 0 52 0;
 #X connect 52 0 47 0;
 #X connect 52 0 36 0;
-#X connect 54 0 56 0;
+#X connect 54 0 6 0;
 #X connect 55 0 54 1;
 #X connect 55 0 54 2;
 #X connect 55 0 54 3;
-#X connect 56 0 6 0;
-#X connect 57 0 56 1;
-#X restore -235 17 pd images;
-#X text -100 92 LOAD IMAGE;
-#X text -96 190 [jpg/png];
-#X text -10 91 LOAD VIDEO;
-#X text 12 191 [?];
-#X text -123 -86 Slit_Stitch 1 by Nicholas Brown-Hernandez;
-#X text 29 -74 www.combjelly.ca;
-#X connect 38 0 42 0;
-#X connect 40 0 39 0;
-#X connect 41 0 38 0;
-#X connect 42 0 40 0;
+#X restore -146 -554 pd images;
+#X text -11 -479 LOAD IMAGE;
+#X text -7 -381 [jpg/png];
+#X text 79 -480 LOAD VIDEO;
+#X text 101 -380 [?];
+#X text -34 -657 Slit_Stitch 1 by Nicholas Brown-Hernandez;
+#X text 118 -645 www.combjelly.ca;
+#X text 162 -478 CHOOSE FILENAME/SAVE;
+#X obj 322 -440 counter 10000;
+#X obj 400 -525 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 329 -403 s rotate;
+#X obj 340 -472 metro 200;
+#X connect 45 0 47 0;
+#X connect 46 0 48 0;
+#X connect 48 0 45 0;
