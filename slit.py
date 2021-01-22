@@ -10,6 +10,9 @@ try:
 	location=open("location.txt","r+")
 	location = location.read().replace(";","").replace("\n","")
 	option = 1
+	savepath = location.split("/")
+	del savepath[-1]
+	savepath = "/".join(savepath)
 	print(location)
 
 except:
@@ -22,7 +25,7 @@ if option != 1:
 	option = 2
 
 
-def go(location,option):
+def go(location,option,savepath):
 
 	# Open a file
 	path = location
@@ -59,7 +62,7 @@ def go(location,option):
 	  new_im.paste(im, (x_offset,0))
 	  x_offset += im.size[0]
 
-	new_im.save('slittest.png')
+	new_im.save(savepath+'/slittest.png')
 	print("done :-)")
 
-go(location,option)
+go(location,option,savepath)
